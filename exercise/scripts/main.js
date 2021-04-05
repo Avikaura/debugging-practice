@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', function() {
       // If the card has already been matched, ignore it.
       if (card.classList.contains('is-matched')) {
         return;
-      }
+      } 
       // If we haven't selected 2 cards yet, add the current card to the
       // collection of selected cards and apply the correct CSS class.
       if (selectedCards.length < 2) {
@@ -34,12 +34,12 @@ window.addEventListener('DOMContentLoaded', function() {
         // Regardless of whether or not the cards match, deselect them and reset
         // the collection of matched cards.
         card1.classList.remove('is-selected');
-        card2.classList.remove('is-selected'); //third fixed error
+        card2.classList.remove('is-selected'); //third  fixed error
         selectedCards = [];
       }
 
       // If we've matched all the cards, display a message.
-      if (matchedCards.length > cards.length) {
+      if (matchedCards.length === cards.length) { // fourth fixed user error
         alert('You matched all the cards, nice job!');
       }
     });
